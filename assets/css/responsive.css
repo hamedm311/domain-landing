@@ -1,0 +1,285 @@
+/* 
+ * Host Baran - Responsive Styles
+ * Mobile First Approach
+ */
+
+/* =====================
+   Small Devices (Tablets, >= 768px)
+   ===================== */
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: clamp(var(--font-size-4xl), 5vw, var(--font-size-5xl));
+    }
+    
+    .section-title {
+        font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-3xl));
+    }
+}
+
+/* =====================
+   Medium Devices (Laptops, >= 1024px)
+   ===================== */
+@media (min-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* =====================
+   Large Devices (Desktops, >= 1200px)
+   ===================== */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--spacing-8);
+    }
+}
+
+/* =====================
+   Mobile Optimizations (< 768px)
+   ===================== */
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Hero Section Mobile */
+    .hero-section {
+        padding: var(--spacing-12) 0;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .domain-search-wrapper {
+        padding: var(--spacing-4);
+    }
+    
+    .btn-search {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .hero-trust-badges {
+        flex-direction: column;
+        gap: var(--spacing-3);
+        align-items: center;
+    }
+    
+    /* Pricing Cards Mobile */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+    
+    .price-card {
+        padding: var(--spacing-6);
+    }
+    
+    .price-card .amount {
+        font-size: var(--font-size-3xl);
+    }
+    
+    /* Comparison Table Mobile */
+    .comparison-table th,
+    .comparison-table td {
+        padding: var(--spacing-3) var(--spacing-2);
+        font-size: var(--font-size-xs);
+    }
+    
+    .comparison-table .highlight-col {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Features Grid Mobile */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+    
+    .feature-item {
+        padding: var(--spacing-6);
+    }
+    
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .feature-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Why Us Section Mobile */
+    .reason-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* FAQ Mobile */
+    .faq-item summary {
+        padding: var(--spacing-4);
+        font-size: var(--font-size-base);
+    }
+    
+    .faq-answer {
+        padding: 0 var(--spacing-4) var(--spacing-4);
+    }
+    
+    /* CTA Section Mobile */
+    .cta-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .cta-desc {
+        font-size: var(--font-size-base);
+    }
+    
+    .btn-lg {
+        width: 100%;
+        padding: var(--spacing-4);
+    }
+    
+    /* Footer Mobile */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+        text-align: center;
+    }
+    
+    .footer-col ul {
+        align-items: center;
+    }
+}
+
+/* =====================
+   Extra Small Devices (< 480px)
+   ===================== */
+@media (max-width: 479px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-3);
+    }
+    
+    .header-content {
+        gap: var(--spacing-4);
+    }
+    
+    .logo a {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .domain-select {
+        width: 100%;
+    }
+    
+    .price-card .badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: var(--spacing-4);
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: var(--spacing-2);
+    }
+}
+
+/* =====================
+   Touch Device Optimizations
+   ===================== */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+    }
+    
+    .price-card:hover {
+        transform: none;
+    }
+    
+    .feature-item:hover {
+        transform: none;
+    }
+    
+    .main-nav a:hover {
+        color: var(--gray-700);
+    }
+}
+
+/* =====================
+   Print Styles
+   ===================== */
+@media print {
+    .site-header,
+    .site-footer,
+    .btn,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero-section {
+        padding: var(--spacing-8) 0;
+    }
+    
+    .price-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* =====================
+   High Contrast Mode
+   ===================== */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        background: var(--primary-darker);
+    }
+    
+    .price-card {
+        border: 2px solid var(--gray-900);
+    }
+    
+    .input-group {
+        border: 2px solid var(--gray-900);
+    }
+}
+
+/* =====================
+   Dark Mode Support (Optional Future Enhancement)
+   ===================== */
+@media (prefers-color-scheme: dark) {
+    /* Currently not implemented - keeping light theme only
+       as per design requirements for clean, premium look */
+}
